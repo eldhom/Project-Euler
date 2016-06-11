@@ -5,13 +5,13 @@ import math
 upperBoundary = 1000
 lowerBoundary = 0
 
-def multiples(multiple, upperBoundary, lowerBoundary):
-	count = 0
+def sumMultiples(multiple, upperBoundary, lowerBoundary):
+	summ = 0
 	for x in range(lowerBoundary, upperBoundary):
 		if(not x%multiple):
-			count += 1
+			summ += x
 
-	return count
+	return summ
 
 
 sys.argv.pop(0)
@@ -31,18 +31,18 @@ try:
 except:
 	print("Using default lower boundary")
 
-if(not len(sys.argv)):
+if(not len(sys.argv) is 2):
 	print("Error: Wrong number of arguments")
 
-for num in sys.argv:
+try:
+	first 	= int(sys.argv[0])
+	second	= int(sys.argv[1])
 	try:
-		num = int(num)
-		try:
-			print(multiples(num, upperBoundary, lowerBoundary) + multiples(num, upperBoundary, lowerBoundary) - multiples(num, upperBoundary, lowerBoundary))
-		except ZeroDivisionError:
-			print(math.nan)
-	except:
-		print("Error: Invalid input - '" + num + "' is - " + str(type(num)))
+		print(sumMultiples(first, upperBoundary, lowerBoundary) + sumMultiples(second, upperBoundary, lowerBoundary) - sumMultiples(first*second, upperBoundary, lowerBoundary))
+	except ZeroDivisionError:
+		print(math.nan)
+except:
+	print("Error: Invalid input - '" + num + "' is - " + str(type(num)))
 
 
 
