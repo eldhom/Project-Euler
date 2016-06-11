@@ -10,7 +10,6 @@ def sumMultiples(multiple, upperBoundary, lowerBoundary):
 	for x in range(lowerBoundary, upperBoundary):
 		if(not x%multiple):
 			summ += x
-
 	return summ
 
 

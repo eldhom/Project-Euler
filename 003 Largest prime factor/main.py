@@ -21,4 +21,4 @@ def largestPrimeFactor(num):
 	return primes.pop()
 
 
-print("Largest Factor is: " + str(largestPrimeFactor(number)))
+print("Largest Factor of:" + str(number) + " is " + str(largestPrimeFactor(number)))
