@@ -103,9 +103,5 @@ numberString = """37107287533902102798797998220837590246510135740250
 53503534226472524250874054075591789781264330331690"""
 
 numberList = [int(string[0:10]) for string in numberString.split('\n')]
-summ = 0
-for x in numberList:
-	summ += x
-
-print(str(summ)[0:10])
+print(str(sum(numberList))[0:10])
 
