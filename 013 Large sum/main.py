@@ -102,6 +102,6 @@ numberString = """37107287533902102798797998220837590246510135740250
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"""
 
-numberList = [int(string[0:10]) for string in numberString.split('\n')]
+numberList = [int(string[0:11]) for string in numberString.split('\n')]
 print(str(sum(numberList))[0:10])
 
